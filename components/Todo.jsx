@@ -155,7 +155,8 @@ export default function Todo() {
                         content={item.todo} 
                         key={item.id} 
                         handleDelete={()=> handleDelete(item.id)} 
-                        handleUpdate={()=> handleUpdate(item.id)} 
+                        handleUpdate={()=> handleUpdate(item.id)}
+                        dateTime={item.created_at} 
                     />                
                 ))}  
                </Suspense> 

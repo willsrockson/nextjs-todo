@@ -5,6 +5,7 @@ import Skeleton from 'react-loading-skeleton'
 import React,{ Suspense, useEffect, useState} from "react";
 import { FaPencilAlt } from "react-icons/fa";
 const ListItem = React.lazy(() => import('./ListItem'));
+import Loader from "./Loader";
 
 export default function Todo() {
     const [todo, setTodo] = useState('')
@@ -131,6 +132,7 @@ export default function Todo() {
   return (
     <div className='todo-box'>
 
+
         <div className='form-box'>
            {editTodo ? 
                 <> 
@@ -147,7 +149,7 @@ export default function Todo() {
 
         <div className='todo-container'>
             <ul>  
-              <Suspense fallback={"Loading please...."}>            
+              <Suspense fallback={<Loader />}>            
                 {todoFromServer.map((item) => (
                     <ListItem 
                         content={item.todo} 

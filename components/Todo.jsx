@@ -1,7 +1,5 @@
 "use client"
 import { FaPlus } from "react-icons/fa6";
-//import ListItem from "./ListItem";
-import Skeleton from 'react-loading-skeleton'
 import React,{ Suspense, useEffect, useState} from "react";
 import { FaPencilAlt } from "react-icons/fa";
 const ListItem = React.lazy(() => import('./ListItem'));
